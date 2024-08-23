@@ -30,7 +30,8 @@
 
         .receipt-header {
             text-align: center;
-            margin: 20px 0;
+            margin-top: 20px;
+            margin-bottom: 5px;
         }
 
         .receipt-header h2 {
@@ -44,26 +45,27 @@
         }
 
         .receipt-details {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .receipt-details table {
             width: 100%;
             border-collapse: collapse;
-        }
-
-        .receipt-details th,
-        .receipt-details td {
-            padding: 4px 0;
-            text-align: left;
+            /* border: 1px solid; */
         }
 
         .receipt-details th {
-            width: 40%;
+            padding: 4px 0;
+            text-align: left;
+            /* border: 1px solid; */
+        }
+
+        .receipt-details th {
+            width: 30%;
         }
 
         .receipt-details td {
-            text-align: right;
+            text-align: left;
         }
 
         .receipt-summary {
@@ -101,6 +103,30 @@
         .print-button button:hover {
             background-color: #0056b3;
         }
+
+        .receipt-time {
+            margin-top: 0px;
+            font-size: 12px;
+            margin-bottom: 10px;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+        .receipt-time td{
+            margin-top: 0px;
+            font-size: 12px;
+            margin-bottom: 10px;
+            width: 50%;
+            /* border: 1px solid; */
+        }
+        .receipt-total {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: right;
+        }
+        .num {
+            float: right;
+        }
     </style>
     <script src="app.js" defer></script> <!-- Memuat global.js -->
 </head>
@@ -116,46 +142,59 @@
             <p id="address">Jl. Contoh Alamat, Kota</p>
             <p id="telp">0271 6754 2345</p>
         </div>
+        <table class="receipt-time">
+            <tr>
+                <td>Shift</td>
+                <td>: <span id="shift">2</span></td>
+                <td>Nomor Nota : <span id="transactionNumber">14423457</span></td>
+            </tr>
+            <tr>
+                <td>Waktu</td>
+                <td colspan="2">: <span id="datetime">22/08/2024 14:30:42</span></td>
+            </tr>
+        </table>
         <div class="divider"></div>
 
         <div class="receipt-details">
             <table>
                 <tr>
-                    <th>No. Nota:</th>
-                    <td>123456</td>
+                    <th>Pompa/Selang</th>
+                    <td>: <span id="hosePump">2 / 1</span></td>
                 </tr>
                 <tr>
-                    <th>Tanggal:</th>
-                    <td>2024-08-23</td>
+                    <th>Jenis BBM</th>
+                    <td>: <span id="fuelType">Pertamax</span></td>
                 </tr>
                 <tr>
-                    <th>Jam:</th>
-                    <td>14:30:00</td>
+                    <th>Liter</th>
+                    <td>: <span class="num" id="volume">3.65</span></td>
                 </tr>
                 <tr>
-                    <th>Kasir:</th>
-                    <td>A001</td>
+                    <th>Harga/Liter</th>
+                    <td>: Rp. <span class="num" id="price">13700</span></td>
+                </tr>
+                <tr class="receipt-total">
+                    <th>Total</th>
+                    <td>: Rp. <span class="num" id="price">50000</span></td>
                 </tr>
                 <tr>
-                    <th>Jenis BBM:</th>
-                    <td>Pertalite</td>
-                </tr>
-                <tr>
-                    <th>Liter BBM:</th>
-                    <td>20.0 L</td>
-                </tr>
-                <tr>
-                    <th>Harga per Liter:</th>
-                    <td>10,000 IDR</td>
-                </tr>
-                <tr>
-                    <th>Total Harga:</th>
-                    <td>200,000 IDR</td>
+                    <th>Operator</th>
+                    <td>: <span id="operator">GUNAWAN</span></td>
                 </tr>
             </table>
         </div>
-
         <div class="divider"></div>
+        <table class="receipt-payment">
+            <tr>
+                <td>Tunai : <span id="shift">2</span></td>
+                <td>Nomor Nota: <span id="transactionNumber">14423457</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">Waktu: <span id="datetime">22/08/2024 14:30:42</span></td>
+            </tr>
+        </table>
+
+
 
         <div class="receipt-footer">
             <p>Terima Kasih</p>
