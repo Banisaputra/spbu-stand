@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struk SPBU</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f1f1f1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .receipt-container {
+            width: 320px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .receipt-header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .receipt-header h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .receipt-header p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .receipt-details {
+            margin-bottom: 20px;
+        }
+
+        .receipt-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .receipt-details th,
+        .receipt-details td {
+            padding: 4px 0;
+            text-align: left;
+        }
+
+        .receipt-details th {
+            width: 40%;
+        }
+
+        .receipt-details td {
+            text-align: right;
+        }
+
+        .receipt-summary {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .divider {
+            border-top: 1px dashed #000;
+            margin: 10px 0;
+        }
+
+        .receipt-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 10px;
+        }
+
+        .print-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .print-button button {
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .print-button button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script src="app.js" defer></script> <!-- Memuat global.js -->
+</head>
+
+<body>
+    <div class="receipt-container">
+        <div class="receipt-header">
+            <!-- logo -->
+            <div class="logo">
+                <img src="images/logo-warna.png" alt="logo-spbu">
+            </div>
+            <h2 id="noSpbu">SPBU 34.123.45</h2>
+            <p id="address">Jl. Contoh Alamat, Kota</p>
+            <p id="telp">0271 6754 2345</p>
+        </div>
+        <div class="divider"></div>
+
+        <div class="receipt-details">
+            <table>
+                <tr>
+                    <th>No. Nota:</th>
+                    <td>123456</td>
+                </tr>
+                <tr>
+                    <th>Tanggal:</th>
+                    <td>2024-08-23</td>
+                </tr>
+                <tr>
+                    <th>Jam:</th>
+                    <td>14:30:00</td>
+                </tr>
+                <tr>
+                    <th>Kasir:</th>
+                    <td>A001</td>
+                </tr>
+                <tr>
+                    <th>Jenis BBM:</th>
+                    <td>Pertalite</td>
+                </tr>
+                <tr>
+                    <th>Liter BBM:</th>
+                    <td>20.0 L</td>
+                </tr>
+                <tr>
+                    <th>Harga per Liter:</th>
+                    <td>10,000 IDR</td>
+                </tr>
+                <tr>
+                    <th>Total Harga:</th>
+                    <td>200,000 IDR</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="receipt-footer">
+            <p>Terima Kasih</p>
+            <p>Selamat Jalan</p>
+        </div>
+
+        <div class="print-button">
+            <button onclick="window.print()">Print Struk</button>
+        </div>
+    </div>
+</body>
+
+</html>

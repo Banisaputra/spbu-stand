@@ -1,0 +1,146 @@
+body {
+   align-items: center;
+   background-color: #ffffff;
+   display: flex;
+   justify-content: center;
+}
+ 
+.container {
+   background-color: #a0a0a083;
+   border-radius: 20px;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   max-width: 700px;
+   margin-top: 20px;
+   text-align: center;
+   transition: transform 0.3s ease-in-out;
+
+}
+.logo {
+   margin-bottom: 20px;
+   width: 100%;
+   text-align: center;
+}
+
+.logo img {
+   width: 50%;
+}
+.receiptForm {
+   background-color: #ffffff;
+   width: 650px;
+   padding: 20px;
+}
+
+.input-container {
+   height: 50px;
+   position: relative;
+   width: 100%;
+   margin-top: 30px;
+}
+.select-container {
+   height: 50px;
+   position: relative;
+   width: 100%;
+   margin-bottom: 50px;
+}
+
+.input {
+   background-color: #ffffff;
+   border: 0;
+   border-radius: 12px;
+   border-bottom: 2px solid #eee;
+   box-sizing: border-box;
+   color: #000000;
+   font-size: 24px;
+   outline: 0;
+   height: 100%;
+   padding: 4px 20px;
+   width: 100%;
+}
+
+.input:focus,
+.input:not(:placeholder-shown) {
+   transform: translateY(2px);
+   display: block;
+}
+
+.placeholder {
+   color: #65657b;
+   font-family: sans-serif;
+   left: 20px;
+   line-height: 14px;
+   pointer-events: none;
+   position: absolute;
+   transform-origin: 0 50%;
+   transition: transform 200ms, color 200ms;
+   top: 20px;
+}
+
+.select-container label {
+   display: block;
+   font-family: sans-serif;
+   margin-bottom: 10px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+   transform: translateY(-38px) translateX(0px) scale(0.85);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+   color: #000000;
+}
+
+.input:focus ~ .placeholder {
+   color: #000000;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   margin-right: -15px;
+   margin-left: -15px;
+}
+
+.col {
+   flex: 1;
+   padding: 15px;
+   box-sizing: border-box;
+}
+
+select {
+   padding: 10px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   background-color: #ffffffd7;
+   width: 100%;
+   box-sizing: border-box;
+}
+
+select:focus {
+   border-color: #66afe9;
+   outline: none;
+   box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+
+.submit {
+   background-color: #08d;
+   border-radius: 12px;
+   border: 0;
+   box-sizing: border-box;
+   color: #eee;
+   cursor: pointer;
+   font-size: 18px;
+   height: 50px;
+   margin-top: 38px;
+   /* outline: 0; */
+   text-align: center;
+   width: 100%;
+}
+
+.submit:active {
+   background-color: #06b;
+}
+ 

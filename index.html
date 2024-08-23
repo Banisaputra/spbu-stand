@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cetak Struk SPBU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="container">
+      <form class="receiptForm" id="receiptForm">
+         <!-- logo -->
+         <div class="logo">
+            <img src="images/logo-warna.png" alt="logo-spbu">
+         </div>
+         <!-- required field -->
+         <div class="input-container">
+           <input id="spbuNumber" class="input" type="text" placeholder="" required />
+           <label for="spbuNumber" class="placeholder">No. SPBU</label>
+         </div>
+         <div class="input-container">
+           <input id="address" class="input" type="text" placeholder="" required/>
+           <label for="address" class="placeholder">Alamat SPBU</label>
+         </div>
+         <div class="input-container">
+           <input id="telp" class="input" type="text" placeholder="" required/>
+           <label for="telp" class="placeholder">Telp.</label>
+         </div>
+         <div class="row">
+            <div class="col">
+               <div class="input-container">
+                  <input id="shift" class="input" type="number" placeholder="" required/>
+                  <label for="shift" class="placeholder">Shift</label>
+               </div>
+            </div>
+            <div class="col">
+               <div class="input-container">
+                  <input id="transactionNumber" class="input" type="number" placeholder="" required/>
+                  <label for="transactionNumber" class="placeholder">No. Transaksi</label>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <div class="input-container">
+                  <input id="date" class="input" type="date" placeholder="" required/>
+                  <label for="date" class="placeholder">Tanggal</label>
+               </div>
+            </div>
+            <div class="col">
+               <div class="input-container">
+                  <input id="time" class="input" type="time" placeholder="" required/>
+                  <label for="time" class="placeholder">Waktu</label>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <div class="input-container">
+                  <input id="pump" class="input" type="number" placeholder="" required/>
+                  <label for="pump" class="placeholder">No. Pompa</label>
+               </div>
+            </div>
+            <div class="col">
+               <div class="input-container">
+                  <input id="hose" class="input" type="number" placeholder="" required/>
+                  <label for="hose" class="placeholder">No. Selang</label>
+               </div>
+            </div>
+         </div>
+         <div class="select-container">
+            <label for="fuelType">Jenis BBM</label>
+            <select name="fuelType" id="fuelType" required>
+               <option value="1">PERTALITE</option>
+               <option value="2">PERTAMAX</option>
+               <option value="3">BIO SOLAR</option>
+               <option value="4">DEXLITE</option>
+               <option value="5">PERTAMAX 92</option>
+            </select>
+         </div>
+         <div class="input-container">
+            <input id="price" class="input" type="number" placeholder="" />
+            <label for="price" class="placeholder">Harga @ Liter</label>
+         </div>
+         <div class="input-container">
+            <input id="totalPrice" class="input" type="number" placeholder="" />
+            <label for="totalPrice" class="placeholder">Total Harga</label>
+         </div>
+         <div class="input-container">
+            <input id="operator" class="input" type="text" placeholder="" />
+            <label for="operator" class="placeholder">Operator</label>
+         </div>
+         <!-- optional vehicle -->
+         <div class="input-container">
+            <input id="noPolisi" class="input" type="text" placeholder="" />
+            <label for="noPolisi" class="placeholder">No. Plat</label>
+         </div>
+         <div class="input-container">
+            <input id="odoKM" class="input" type="text" placeholder="" />
+            <label for="odoKM" class="placeholder">Odo/No. HP</label>
+         </div>
+         <!-- optional cash/change -->
+         <div class="input-container">
+            <input id="cash" class="input" type="number" placeholder="" />
+            <label for="cash" class="placeholder">Tunai</label>
+         </div>
+         <div class="input-container">
+            <input id="change" class="input" type="number" placeholder="" />
+            <label for="change" class="placeholder">Kembalian</label>
+         </div>
+         <!-- footer -->
+         <div class="input-container">
+            <textarea name="footer" class="input" id="footer">TERIMAKASIH DAN SELAMAT JALAN</textarea>
+            <label for="footer" class="placeholder">Catatan</label>
+         </div>
+
+         <button type="submit" class="submit">GENERATE STRUCK</button>
+      </form>
+
+   </div>
+
+   <script src="app.js"></script>
+</body>
+
+</html>
