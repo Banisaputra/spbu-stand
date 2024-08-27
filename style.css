@@ -144,3 +144,177 @@ select:focus {
    background-color: #06b;
 }
  
+
+/* struck page */
+.receipt-container {
+   width: 320px;
+   background-color: white;
+   padding: 20px;
+   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+   font-size: 12px;
+   line-height: 1.5;
+}
+
+.receipt-header {
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 5px;
+}
+
+.receipt-header h2 {
+   margin: 0;
+   font-size: 18px;
+}
+
+.receipt-header p {
+   margin: 0;
+   font-size: 12px;
+}
+
+.receipt-details {
+   margin-bottom: 10px;
+}
+
+.receipt-details table {
+   width: 100%;
+   border-collapse: collapse;
+   /* border: 1px solid; */
+}
+
+.receipt-details th {
+   padding: 4px 0;
+   text-align: left;
+   /* border: 1px solid; */
+}
+
+.receipt-details th {
+   width: 30%;
+}
+
+.receipt-details td {
+   text-align: left;
+}
+
+.divider {
+   border-top: 1px dashed #000;
+   margin: 10px 0;
+}
+
+.receipt-footer {
+   text-align: center;
+   margin-top: 20px;
+   font-size: 14px;
+}
+
+.print-button {
+   text-align: center;
+   margin-top: 20px;
+}
+.struck-button {
+   text-align: center;
+   margin-top: 10px;
+}
+
+.print-button button {
+   width: 100%;
+   padding: 10px 20px;
+   font-size: 14px;
+   cursor: pointer;
+   background-color: #e6e6e6;
+   color: rgb(0, 174, 255);
+   border: none;
+   border-radius: 5px;
+}
+.struck-button button {
+   width: 100%;
+   padding: 10px 20px;
+   font-size: 14px;
+   background-color: #e6e6e6;
+   cursor: pointer;
+   color: rgb(0, 174, 255);
+   border: none;
+   border-radius: 5px;
+}
+
+.print-button button:hover {
+   background-color: #027cff;
+   color: rgb(0, 0, 0);
+}
+.struck-button button:hover {
+   background-color: #24fc36;
+   color: rgb(0, 0, 0);
+}
+
+.receipt-time {
+   margin-top: 0px;
+   font-size: 12px;
+   margin-bottom: 10px;
+   width: 100%;
+   /* border: 1px solid; */
+}
+.receipt-time td{
+   margin-top: 0px;
+   font-size: 12px;
+   margin-bottom: 10px;
+   /* border: 1px solid; */
+}
+.receipt-total {
+   margin-top: 20px;
+   font-weight: bold;
+   font-size: 16px;
+   text-align: right;
+}
+.num {
+   float: right;
+}
+
+.receipt-payment {
+   margin-bottom: 5px;
+   display: none;
+}
+.receipt-payment table {
+   width: 100%;
+   border-collapse: collapse;
+   /* border: 1px solid; */
+}
+.receipt-payment th {
+   width: 30%;
+   text-align: left;
+   /* border: 1px solid; */
+}
+.receipt-payment td {
+   margin-top: 0px;
+   font-size: 12px;
+   margin-bottom: 10px;
+   /* border: 1px solid; */
+}
+
+.receipt-idVehicle {
+   margin-bottom: 5px;
+   display: none;
+}
+.receipt-idVehicle table {
+   width: 100%;
+   border-collapse: collapse;
+   /* border: 1px solid; */
+}
+.receipt-idVehicle th {
+   width: 30%;
+   text-align: left;
+   /* border: 1px solid; */
+}
+.receipt-idVehicle td {
+   margin-top: 0px;
+   font-size: 12px;
+   margin-bottom: 10px;
+   /* border: 1px solid; */
+}
+
+@media print {
+  .print-button {
+   display: none;
+  }
+  .struck-button {
+   display: none;
+  }
+}

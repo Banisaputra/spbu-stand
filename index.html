@@ -6,6 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cetak Struk SPBU</title>
     <link rel="stylesheet" href="style.css">
+
+   <style>
+      .custom-checkbox {
+         display: inline-block;
+         position: relative;
+         padding-left: 35px;
+         cursor: pointer;
+         font-size: 18px;
+         user-select: none;
+         margin-top: 20px;
+      }
+
+      .custom-checkbox input {
+         position: absolute;
+         opacity: 0;
+         cursor: pointer;
+      }
+
+      .checkmarkVehicle {
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 25px;
+         width: 25px;
+         background-color: #ebebeb;
+         border-radius: 4px;
+      }
+      .checkmarkPayment {
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 25px;
+         width: 25px;
+         background-color: #ebebeb;
+         border-radius: 4px;
+      }
+
+      .vehicleInfo,
+      .paymentInfo {
+         display: none;
+      }
+
+      .custom-checkbox input:checked.infoVehicle ~ .checkmarkVehicle,
+      .custom-checkbox input:checked.infoPayment ~ .checkmarkPayment {
+         background-color: #2196F3;
+      }
+
+      .checkmarkVehicle:after,
+      .checkmarkPayment:after {
+         content: "";
+         position: absolute;
+         display: none;
+      }
+
+      .custom-checkbox input:checked ~ .checkmarkVehicle:after,
+      .custom-checkbox input:checked ~ .checkmarkPayment:after {
+         display: block;
+      }
+
+      .custom-checkbox .checkmarkVehicle:after,
+      .custom-checkbox .checkmarkPayment:after {
+         left: 9px;
+         top: 3px;
+         width: 6px;
+         height: 12px;
+         border: solid rgb(255, 255, 255);
+         border-width: 0 2px 3px 0;
+         transform: rotate(45deg);
+      }
+   </style>
 </head>
 
 <body>
@@ -42,19 +112,9 @@
                </div>
             </div>
          </div>
-         <div class="row">
-            <div class="col">
-               <div class="input-container">
-                  <input id="date" class="input" type="date" placeholder="" required/>
-                  <label for="date" class="placeholder">Tanggal</label>
-               </div>
-            </div>
-            <div class="col">
-               <div class="input-container">
-                  <input id="time" class="input" type="time" placeholder="" required/>
-                  <label for="time" class="placeholder">Waktu</label>
-               </div>
-            </div>
+         <div class="input-container">
+            <input id="datetime" class="input" type=datetime-local step="1">
+            <label for="datetime" class="placeholder">Tanggal</label>
          </div>
          <div class="row">
             <div class="col">
@@ -93,22 +153,36 @@
             <label for="operator" class="placeholder">Operator</label>
          </div>
          <!-- optional vehicle -->
-         <div class="input-container">
-            <input id="noPolisi" class="input" type="text" placeholder="" />
-            <label for="noPolisi" class="placeholder">No. Plat</label>
-         </div>
-         <div class="input-container">
-            <input id="odoKM" class="input" type="text" placeholder="" />
-            <label for="odoKM" class="placeholder">Odo/No. HP</label>
+         <label class="custom-checkbox">
+            <input type="checkbox" class="infoVehicle" id="infoVehicle">
+            <span class="checkmarkVehicle"></span>
+            Info Kendaraan
+         </label>
+         <div class="vehicleInfo" id="vehicleInfo">
+            <div class="input-container">
+               <input id="noPolisi" class="input" type="text" placeholder="" />
+               <label for="noPolisi" class="placeholder">No. Polisi</label>
+            </div>
+            <div class="input-container">
+               <input id="odoKM" class="input" type="text" placeholder="" />
+               <label for="odoKM" class="placeholder">Odo/No. HP</label>
+            </div>
          </div>
          <!-- optional cash/change -->
-         <div class="input-container">
-            <input id="cash" class="input" type="number" placeholder="" />
-            <label for="cash" class="placeholder">Tunai</label>
-         </div>
-         <div class="input-container">
-            <input id="change" class="input" type="number" placeholder="" />
-            <label for="change" class="placeholder">Kembalian</label>
+         <label class="custom-checkbox">
+            <input type="checkbox" class="infoPayment" id="infoPayment">
+            <span class="checkmarkPayment"></span>
+            Info Pembayaran
+         </label>
+         <div class="paymentInfo" id="paymentInfo">
+            <div class="input-container">
+               <input id="cash" class="input" type="number" placeholder="" />
+               <label for="cash" class="placeholder">Tunai</label>
+            </div>
+            <div class="input-container">
+               <input id="change" class="input" type="number" placeholder="" />
+               <label for="change" class="placeholder">Kembalian</label>
+            </div>
          </div>
          <!-- footer -->
          <div class="input-container">
@@ -125,3 +199,5 @@
 </body>
 
 </html>
+
+
